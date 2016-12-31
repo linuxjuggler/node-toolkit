@@ -3,7 +3,7 @@ FROM node:7-alpine
 MAINTAINER Mhd Zaher Ghaibeh <z@zah.me>
 
 RUN apk update && \
-    apk add git ca-certificates wget && \
+    apk add git ca-certificates wget python && \
     update-ca-certificates && \
     npm install -g gulp bower npm-cache yarn && \
     npm cache clean && \
