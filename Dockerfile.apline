@@ -1,0 +1,18 @@
+FROM mhart/alpine-node:7
+
+MAINTAINER Mhd Zaher Ghaibeh <z@zah.me>
+
+RUN apk update && apk upgrade && apk add wget && \
+    apk --no-cache add ca-certificates && update-ca-certificates && \
+    npm install -g gulp bower  npm-cache && \
+    npm cache clean && \
+    wget -O /usr/local/bin/dumb-init https://github.com/Yelp/dumb-init/releases/download/v1.2.0/dumb-init_1.2.0_amd64 && \
+    chmod +x /usr/local/bin/dumb-init && \
+    wget -O /usr/local/bin/latest https://yarnpkg.com/latest.tar.gz && \
+    cd /usr/local/bin && tar zvxf latest && rm -f latest && mv dist yarn && \
+    chmod +x /usr/local/bin/yarn/bin/yarn
+
+
+WORKDIR /workspace
+
+ENTRYPOINT ["/usr/local/bin/dumb-init", "--"]
