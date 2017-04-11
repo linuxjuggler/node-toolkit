@@ -7,7 +7,7 @@ RUN apt-get update && apt-get -yqq install apt-transport-https && \
     echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list && \
     apt-get -yqq update && \
     apt-get -yqq --no-install-recommends install git yarn && \
-    npm install -g gulp bower npm-cache && \
+    npm install -g npm gulp bower npm-cache typescript && \
     npm cache clean && \
     apt-get -yqq autoremove && \
     apt-get -yqq clean && \
