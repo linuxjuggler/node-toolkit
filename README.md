@@ -8,7 +8,7 @@
 
 # **Installed Components:**
 
-**node  --version** 	 : v7.8.0
+**node  --version** 	 : v7.9.0
 **npm   --version**      : v4.2.0
 **yarn  --version** 	 : 0.22.0
 **gulp  --version**  	 : 3.9.1
