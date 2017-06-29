@@ -8,7 +8,7 @@ RUN apt-get update && apt-get -yqq install apt-transport-https && \
     apt-get -yqq update && \
     apt-get -yqq --no-install-recommends install git yarn && \
     npm -g i gulp bower npm-cache typescript && \
-    npm cache clean && \
+    npm cache verify && npm cache clean --force && \
     apt-get -yqq autoremove && \
     apt-get -yqq clean && \
     rm -rf /var/lib/apt/lists/* /var/cache/* /tmp/* /var/tmp/* && \
