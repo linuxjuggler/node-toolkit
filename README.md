@@ -8,12 +8,14 @@
 
 # **Installed Components:**
 
-**node  --version** 	 : v8.1.2
+**node  --version** 	 : v8.1.4
 **npm   --version**      : v5.0.3
 **yarn  --version** 	 : 0.24.6
 **gulp  --version**  	 : 3.9.1
 **bower --version**	 : 1.8.0
 **typescript --version** : 2.4.1
+
+_PS:_ Please note that the versions may vary depend on the original node image, as we auto trigger the build when node updated
 
 
 # **Base Image:**
