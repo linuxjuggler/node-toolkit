@@ -1,13 +1,13 @@
 FROM node:slim
 
-MAINTAINER Mhd Zaher Ghaibeh <z@zah.me>
+LABEL Maintainer="Zaher Ghaibeh <z@zah.me>" \
+      Description="Lightweight nodejs container based on ubuntu with bower, yarm, gulp."
 
 RUN apt-get update && apt-get -yqq install apt-transport-https && \
     curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
     echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list && \
     apt-get -yqq update && \
     apt-get -yqq --no-install-recommends install git yarn && \
-#    npm -g i npm && \
     npm -g i gulp-cli bower npm-cache typescript && \
     npm cache verify && npm cache clean --force && \
     apt-get -yqq autoremove && \
