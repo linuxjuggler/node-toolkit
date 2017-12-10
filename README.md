@@ -1,6 +1,4 @@
-[![Docker Pulls](https://img.shields.io/docker/pulls/zaherg/node-toolkit.svg)](https://hub.docker.com/r/zaherg/node-toolkit/)
-[![](https://images.microbadger.com/badges/image/zaherg/node-toolkit.svg)](https://microbadger.com/images/zaherg/node-toolkit "Get your own image badge on microbadger.com")
-[![](https://images.microbadger.com/badges/version/zaherg/node-toolkit.svg)](https://microbadger.com/images/zaherg/node-toolkit "Get your own version badge on microbadger.com")
+[![Docker Pulls](https://img.shields.io/docker/pulls/zaherg/node-toolkit.svg)](https://hub.docker.com/r/zaherg/node-toolkit/) [![](https://images.microbadger.com/badges/image/zaherg/node-toolkit.svg)](https://microbadger.com/images/zaherg/node-toolkit "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/version/zaherg/node-toolkit.svg)](https://microbadger.com/images/zaherg/node-toolkit "Get your own version badge on microbadger.com")
 
 
 
