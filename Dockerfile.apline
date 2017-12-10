@@ -1,7 +1,13 @@
 FROM node:alpine
 
 LABEL Maintainer="Zaher Ghaibeh <z@zah.me>" \
-      Description="Lightweight nodejs container based on alpine with bower, yarm, gulp."
+      Description="Lightweight nodejs container based on alpine with bower, yarm, gulp and typescript." \
+      org.label-schema.name="Nodejs Toolkit" \
+      org.label-schema.description="Lightweight nodejs container based on alpine with bower, yarm, gulp and typescript." \
+      org.label-schema.build-date=$BUILD_DATE \
+      org.label-schema.vcs-url="https://github.com/linuxjuggler/node-toolkit.git" \
+      org.label-schema.vcs-ref=$VCS_REF \
+      org.label-schema.schema-version="1.0.0"
 
 RUN apk --no-cache update && apk --no-cache upgrade && apk add wget yarn && \
     apk --no-cache add ca-certificates && update-ca-certificates && \
