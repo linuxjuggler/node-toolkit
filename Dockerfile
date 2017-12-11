@@ -1,5 +1,10 @@
 FROM node:slim
 
+ARG BUILD_DATE
+ARG VCS_REF
+
+ENV INITVERSION 1.2.1
+
 LABEL Maintainer="Zaher Ghaibeh <z@zah.me>" \
       Description="Lightweight nodejs container based on ubuntu with bower, yarm, gulp and typescript." \
       org.label-schema.name="Nodejs Toolkit" \
@@ -19,7 +24,7 @@ RUN apt-get update && apt-get -yqq install apt-transport-https && \
     apt-get -yqq autoremove && \
     apt-get -yqq clean && \
     rm -rf /var/lib/apt/lists/* /var/cache/* /tmp/* /var/tmp/* && \
-    wget -O /usr/local/bin/dumb-init https://github.com/Yelp/dumb-init/releases/download/v1.2.0/dumb-init_1.2.0_amd64 && \
+    wget -O /usr/local/bin/dumb-init https://github.com/Yelp/dumb-init/releases/download/v${INITVERSION}/dumb-init_${INITVERSION}_amd64 && \
     chmod +x /usr/local/bin/dumb-init
 
 
