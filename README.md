@@ -2,7 +2,7 @@
 
 
 
-**Nodejs image** which you can use to run gulp, yarm, npm and bower
+**Nodejs image** which you can use to run gulp, yarn, npm and bower
 
 # **Installed Components:**
 
